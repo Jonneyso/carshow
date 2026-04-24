@@ -304,6 +304,8 @@
                     <option value="byd">比亚迪</option>
                     <option value="lantu">岚图</option>
                     <option value="yijing">奕境</option>
+                    <option value="zeeker">极氪</option>
+                    <option value="leapmotor">零跑</option>
                 </select>
                 <label for="type-filter" style="margin-left: 20px;">车型类型:</label>
                 <select id="type-filter" onchange="filterModels()">
@@ -639,7 +641,43 @@
                         <td>2980</td>
                         <td>32.98-37.98</td>
                         <td>6</td>
-                        <td>2026年4月25日</td>
+                        <td>2026年4月25日上市</td>
+                    </tr>
+                    
+                    <!-- 极氪 -->
+                    <tr data-brand="zeeker" data-type="new">
+                        <td>极氪</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('zeeker-009')">009</a></td>
+                        <td>新车型</td>
+                        <td>5209</td>
+                        <td>3205</td>
+                        <td>待公布</td>
+                        <td>6/7</td>
+                        <td>2026年4月24日开启预售</td>
+                    </tr>
+                    
+                    <!-- 零跑 -->
+                    <tr data-brand="leapmotor" data-type="new">
+                        <td>零跑</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('leapmotor-lafa5')">Lafa5 Ultra</a></td>
+                        <td>新车型</td>
+                        <td>4700+</td>
+                        <td>2780+</td>
+                        <td>11.88-12.48</td>
+                        <td>5</td>
+                        <td>2026年4月24日上市</td>
+                    </tr>
+                    
+                    <!-- 小米 -->
+                    <tr data-brand="xiaomi" data-type="new">
+                        <td>小米</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('xiaomi-yu7')">YU7 GT</a></td>
+                        <td>新车型</td>
+                        <td>4900+</td>
+                        <td>2900+</td>
+                        <td>待公布</td>
+                        <td>5</td>
+                        <td>2026年年内上市</td>
                     </tr>
                 </tbody>
             </table>
@@ -1740,6 +1778,105 @@
                     <div style="margin-top: 20px;">
                         <h3>动力系统</h3>
                         <p>中期改款奔驰S级提供燃油、轻混、插电混动多种动力版本，兼顾性能与能耗。入门款S 350搭载2.0T直列四缸+48V轻混系统，最大输出313马力，峰值扭矩420牛-米，百公里加速6.1秒；主力款S 450/S 500配备3.0T直列六缸+EQ Boost轻混系统，最大功率367-435马力，百公里加速4.8-5.5秒；旗舰款S 580保留4.0T V8双涡轮增压+48V架构，最大输出503马力，零百加速仅需4.4秒。插电混动版S 580 e搭载全新28.6kWh电池组，WLTC纯电续航突破120公里，较现款提升近40%，支持200kW直流快充，30分钟可补电至80%。</p>
+                    </div>
+                `
+            },
+            'zeeker-009': {
+                title: '极氪009',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>极氪</li>
+                                <li><strong>车型：</strong>009</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年4月24日开启预售</li>
+                                <li><strong>价格：</strong>待公布</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>5209mm</li>
+                                <li><strong>轴距：</strong>3205mm</li>
+                                <li><strong>座位数：</strong>6/7座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>焕新极氪009在北京车展正式亮相并同步开启预售，推出七座 Ultra版、七座 Ultra+齐家版和六座 Ultra+行政版，限时预订权益至高享8万元。外观采用全新设计语言，更加年轻时尚，同时保持豪华MPV的大气感。内饰配备大尺寸中控屏和后排娱乐系统，提供豪华舒适的乘坐体验。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>预计搭载高性能电动动力系统，提供长续航版本。</p>
+                    </div>
+                `
+            },
+            'leapmotor-lafa5': {
+                title: '零跑Lafa5 Ultra',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>零跑</li>
+                                <li><strong>车型：</strong>Lafa5 Ultra</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年4月24日上市</li>
+                                <li><strong>价格：</strong>11.88-12.48万元</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>4700+mm</li>
+                                <li><strong>轴距：</strong>2780+mm</li>
+                                <li><strong>座位数：</strong>5座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>零跑Lafa5 Ultra在北京车展正式上市，限时价11.88-12.48万元。相比原版，Ultra车型增加了专属运动套件，包括前铲、侧裙、尾翼以及尾部扩散器，并且还有专属的轮毂和卡钳，差异明显。内饰配备大尺寸中控屏和智能驾驶辅助系统，提供年轻运动的驾驶体验。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>搭载180kW电机，相比普通版的160kW有所提升，提供更好的加速性能。</p>
+                    </div>
+                `
+            },
+            'xiaomi-yu7': {
+                title: '小米YU7 GT',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>小米</li>
+                                <li><strong>车型：</strong>YU7 GT</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年年内上市</li>
+                                <li><strong>价格：</strong>待公布</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>4900+mm</li>
+                                <li><strong>轴距：</strong>2900+mm</li>
+                                <li><strong>座位数：</strong>5座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>小米YU7 GT在北京车展上预告上市计划，作为小米汽车的新车型，预计将延续小米的科技感设计理念，配备先进的智能驾驶辅助系统和互联功能，提供高性能的驾驶体验。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>预计搭载高性能电动动力系统，提供长续航版本。</p>
                     </div>
                 `
             }
