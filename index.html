@@ -203,7 +203,7 @@
         
         <section id="overview">
             <h2>展会概览</h2>
-            <p>2026年北京国际汽车展览会（第十九届）是全球规模最大的汽车展会之一，首次采用双馆联动办展模式，展示汽车产业的最新发展趋势。</p>
+            <p>2026（第十九届）北京国际汽车展览会（Auto China 2026）以"领时代·智未来"为主题，首次采用双馆联动办展模式，规模跃居全球车展首位，成为全球规模和影响力最大的国际A级车展。</p>
             <div class="overview-grid">
                 <div class="overview-item">
                     <h4>展会主题</h4>
@@ -218,8 +218,12 @@
                     <p>中国国际展览中心（顺义馆）与首都国际会展中心</p>
                 </div>
                 <div class="overview-item">
-                    <h4>参展品牌</h4>
-                    <p>100+</p>
+                    <h4>展览面积</h4>
+                    <p>38万平方米（17个展馆）</p>
+                </div>
+                <div class="overview-item">
+                    <h4>参展企业</h4>
+                    <p>2000+家（21个国家和地区）</p>
                 </div>
                 <div class="overview-item">
                     <h4>展车总数</h4>
@@ -234,11 +238,24 @@
                     <p>71台</p>
                 </div>
                 <div class="overview-item">
-                    <h4>展览面积</h4>
-                    <p>38万平方米</p>
+                    <h4>入场观众</h4>
+                    <p>128万人次（海外6.5万）</p>
+                </div>
+                <div class="overview-item">
+                    <h4>媒体报道</h4>
+                    <p>3.2万名记者（海外4125名）</p>
+                </div>
+                <div class="overview-item">
+                    <h4>新闻发布会</h4>
+                    <p>219场</p>
+                </div>
+                <div class="overview-item">
+                    <h4>同期活动</h4>
+                    <p>50+场峰会论坛</p>
                 </div>
             </div>
-            <p style="margin-top: 20px; font-size: 0.9em; color: #666;"><strong>信息来源：</strong>北京车展官方网站 (autochinashow.org)、新华网、人民网</p>
+            <p style="margin-top: 15px; font-size: 0.95em; color: #555;"><strong>日程安排：</strong>4月24-25日新闻媒体日 ｜ 4月26-27日专业观众日 ｜ 4月28日-5月3日公众参观日（每日10:00-18:00）</p>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #666;"><strong>信息来源：</strong>北京车展官方平台 Auto China 2026 (autobeijing.org.cn)、新华网、人民日报、北京市人民政府门户网站</p>
         </section>
         
         <section id="comparison">
@@ -277,14 +294,15 @@
                     <tr>
                         <td>北京车展</td>
                         <td>2026</td>
-                        <td>100+</td>
-                        <td>181+</td>
-                        <td>600+</td>
-                        <td>100+</td>
+                        <td>2000+家（21国）</td>
+                        <td>181</td>
+                        <td>近千家</td>
+                        <td>219场</td>
                         <td>38万平方米</td>
                     </tr>
                 </tbody>
             </table>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #666;"><strong>信息来源：</strong>北京车展官方平台 Auto China 2026 (autobeijing.org.cn)、新华网、人民日报。2024年北京车展数据来自官方公开统计；2025年上海车展为对比参考数据。</p>
         </section>
         
         <section id="models">
@@ -308,6 +326,12 @@
                     <option value="yijing">奕境</option>
                     <option value="zeeker">极氪</option>
                     <option value="leapmotor">零跑</option>
+                    <option value="yangwang">仰望</option>
+                    <option value="tengshi">腾势</option>
+                    <option value="zhiji">智己</option>
+                    <option value="arcfox">极狐</option>
+                    <option value="hongqi">红旗</option>
+                    <option value="wuling">五菱</option>
                 </select>
                 <label for="type-filter" style="margin-left: 20px;">车型类型:</label>
                 <select id="type-filter" onchange="filterModels()">
@@ -331,6 +355,26 @@
                 </thead>
                 <tbody>
                     <!-- 奥迪 -->
+                    <tr data-brand="audi" data-type="new">
+                        <td>奥迪</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('audi-a6letrone')">A6L e-tron</a></td>
+                        <td>新车型</td>
+                        <td>5020</td>
+                        <td>3020</td>
+                        <td>30.98-43.98</td>
+                        <td>5</td>
+                        <td>2026年北京车展全球首发</td>
+                    </tr>
+                    <tr data-brand="audi" data-type="new">
+                        <td>奥迪</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('audi-a6l')">新一代A6L（燃油）</a></td>
+                        <td>新车型</td>
+                        <td>5020+</td>
+                        <td>3020+</td>
+                        <td>待公布</td>
+                        <td>5</td>
+                        <td>2026年北京车展首发（搭载华为乾崑智驾）</td>
+                    </tr>
                     <tr data-brand="audi" data-type="new">
                         <td>奥迪</td>
                         <td><a href="javascript:void(0)" onclick="showCarDetails('audi-a4l')">A4L</a></td>
@@ -437,6 +481,16 @@
                     </tr>
                     
                     <!-- 奔驰 -->
+                    <tr data-brand="mercedes" data-type="new">
+                        <td>奔驰</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('mercedes-glc-ev')">长轴距纯电GLC SUV</a></td>
+                        <td>新车型</td>
+                        <td>4800+</td>
+                        <td>2977</td>
+                        <td>待公布</td>
+                        <td>5</td>
+                        <td>2026年北京车展全球首发</td>
+                    </tr>
                     <tr data-brand="mercedes" data-type="new">
                         <td>奔驰</td>
                         <td><a href="javascript:void(0)" onclick="showCarDetails('mercedes-c')">C级</a></td>
@@ -673,27 +727,151 @@
                     <!-- 小米 -->
                     <tr data-brand="xiaomi" data-type="new">
                         <td>小米</td>
-                        <td><a href="javascript:void(0)" onclick="showCarDetails('xiaomi-yu7')">YU7 GT</a></td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('xiaomi-yu7')">YU7</a></td>
                         <td>新车型</td>
-                        <td>4900+</td>
-                        <td>2900+</td>
+                        <td>4999</td>
+                        <td>3000</td>
+                        <td>25.35-32.99</td>
+                        <td>5</td>
+                        <td>2026年北京车展公布并已上市</td>
+                    </tr>
+                    <tr data-brand="xiaomi" data-type="new">
+                        <td>小米</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('xiaomi-yu7gt')">YU7 GT</a></td>
+                        <td>新车型</td>
+                        <td>4999+</td>
+                        <td>3000</td>
                         <td>待公布</td>
                         <td>5</td>
-                        <td>2026年年内上市</td>
+                        <td>2026年5月底发布</td>
+                    </tr>
+                    <tr data-brand="xiaomi" data-type="new">
+                        <td>小米</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('xiaomi-visiongt')">Xiaomi Vision GT</a></td>
+                        <td>概念车</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>概念车</td>
+                        <td>—</td>
+                        <td>2026年北京车展国内首发</td>
+                    </tr>
+                    <tr data-brand="xiaomi" data-type="facelift">
+                        <td>小米</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('xiaomi-su7')">新一代SU7</a></td>
+                        <td>新车型</td>
+                        <td>4997</td>
+                        <td>3000</td>
+                        <td>21.59-29.99</td>
+                        <td>5</td>
+                        <td>2026年北京车展（锁单超6万台）</td>
+                    </tr>
+
+                    <!-- 仰望 -->
+                    <tr data-brand="yangwang" data-type="new">
+                        <td>仰望</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('yangwang-u9x')">U9 Xtreme</a></td>
+                        <td>新车型</td>
+                        <td>4966</td>
+                        <td>2950</td>
+                        <td>待公布</td>
+                        <td>2</td>
+                        <td>2026年北京车展全球首发（顺义馆E3）</td>
+                    </tr>
+                    <tr data-brand="yangwang" data-type="new">
+                        <td>仰望</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('yangwang-u8l')">U8L鼎藏版</a></td>
+                        <td>新车型</td>
+                        <td>5360</td>
+                        <td>3260</td>
+                        <td>待公布</td>
+                        <td>5</td>
+                        <td>2026年北京车展首发</td>
+                    </tr>
+
+                    <!-- 腾势 -->
+                    <tr data-brand="tengshi" data-type="new">
+                        <td>腾势</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('tengshi-z')">Z敞篷版</a></td>
+                        <td>新车型</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>待公布</td>
+                        <td>2</td>
+                        <td>2026年北京车展首发（全球首款智能电动超跑敞篷）</td>
+                    </tr>
+
+                    <!-- 智己 -->
+                    <tr data-brand="zhiji" data-type="new">
+                        <td>智己</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('zhiji-ls8')">LS8</a></td>
+                        <td>新车型</td>
+                        <td>5100+</td>
+                        <td>3100+</td>
+                        <td>待公布</td>
+                        <td>6</td>
+                        <td>2026年北京车展首发（旗舰大满配SUV）</td>
+                    </tr>
+
+                    <!-- 极狐 -->
+                    <tr data-brand="arcfox" data-type="new">
+                        <td>极狐</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('arcfox-s3')">阿尔法S3</a></td>
+                        <td>新车型</td>
+                        <td>4860</td>
+                        <td>2900</td>
+                        <td>预计15-20</td>
+                        <td>5</td>
+                        <td>2026年4月24日北京车展预售</td>
+                    </tr>
+
+                    <!-- 红旗 -->
+                    <tr data-brand="hongqi" data-type="new">
+                        <td>红旗</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('hongqi-tiannian1')">天辇1号 eVTOL</a></td>
+                        <td>概念车</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>概念车</td>
+                        <td>—</td>
+                        <td>2026年北京车展亮相（载人eVTOL飞行汽车）</td>
+                    </tr>
+
+                    <!-- 五菱 -->
+                    <tr data-brand="wuling" data-type="new">
+                        <td>五菱</td>
+                        <td><a href="javascript:void(0)" onclick="showCarDetails('wuling-xingguangl')">星光L大六座SUV</a></td>
+                        <td>新车型</td>
+                        <td>4900+</td>
+                        <td>2800+</td>
+                        <td>15万以内</td>
+                        <td>6</td>
+                        <td>2026年北京车展发布</td>
                     </tr>
                 </tbody>
             </table>
-            <p style="margin-top: 20px; font-size: 0.9em; color: #666;"><strong>信息来源：</strong>新京报、车市红点、金羊网、汽车之家</p>
+            <p style="margin-top: 20px; font-size: 0.9em; color: #666;"><strong>信息来源：</strong>北京车展官方平台 Auto China 2026 (autobeijing.org.cn)、新华网、人民日报、汽车之家、华夏时报、车云网。带"+"号数据为官方"约/以上"表述的近似值。</p>
         </section>
         
         <section id="suppliers">
             <h2>参展供应商</h2>
-            <p style="margin-top: 10px; color: #666;">以下是2026年北京车展的主要参展供应商，涵盖电池、智能驾驶、芯片、汽车电子等多个领域：</p>
+            <p style="margin-top: 10px; color: #666;">2026北京车展吸引了来自21个国家和地区的近千家供应链与科技企业参展，以下为主要参展供应商，涵盖电池、智能驾驶、芯片、汽车电子、线控底盘等多个领域：</p>
             <div class="supplier-grid">
                 <div class="supplier-card">
                     <div class="supplier-info">
                         <h4>宁德时代 (CATL)</h4>
                         <p>主营业务：动力电池、储能电池系统</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>华为乾崑</h4>
+                        <p>主营业务：智能驾驶、智能座舱、电驱系统</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>华为数字能源</h4>
+                        <p>主营业务：动力解决方案、智能电动</p>
                     </div>
                 </div>
                 <div class="supplier-card">
@@ -704,20 +882,8 @@
                 </div>
                 <div class="supplier-card">
                     <div class="supplier-info">
-                        <h4>英伟达 (NVIDIA)</h4>
-                        <p>主营业务：自动驾驶芯片、车载计算平台</p>
-                    </div>
-                </div>
-                <div class="supplier-card">
-                    <div class="supplier-info">
-                        <h4>高通 (Qualcomm)</h4>
-                        <p>主营业务：车载通信芯片、智能座舱芯片</p>
-                    </div>
-                </div>
-                <div class="supplier-card">
-                    <div class="supplier-info">
-                        <h4>华为智能汽车解决方案 (Huawei)</h4>
-                        <p>主营业务：智能驾驶、智能座舱、电驱系统</p>
+                        <h4>黑芝麻智能 (Black Sesame AI)</h4>
+                        <p>主营业务：智能驾驶芯片、图像处理</p>
                     </div>
                 </div>
                 <div class="supplier-card">
@@ -734,20 +900,14 @@
                 </div>
                 <div class="supplier-card">
                     <div class="supplier-info">
-                        <h4>弗迪电池 (FinDreams Battery)</h4>
-                        <p>主营业务：动力电池、储能电池</p>
+                        <h4>博格华纳 (Borgwarner)</h4>
+                        <p>主营业务：电驱动、动力系统解决方案</p>
                     </div>
                 </div>
                 <div class="supplier-card">
                     <div class="supplier-info">
-                        <h4>黑芝麻智能 (Black Sesame AI)</h4>
-                        <p>主营业务：智能驾驶芯片、图像处理</p>
-                    </div>
-                </div>
-                <div class="supplier-card">
-                    <div class="supplier-info">
-                        <h4>麦格纳 (Magna)</h4>
-                        <p>主营业务：汽车零部件、整车代工</p>
+                        <h4>安波福 (APTIV)</h4>
+                        <p>主营业务：汽车线束、智能架构</p>
                     </div>
                 </div>
                 <div class="supplier-card">
@@ -762,20 +922,169 @@
                         <p>主营业务：变速箱、底盘系统、电驱动</p>
                     </div>
                 </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>麦格纳 (Magna)</h4>
+                        <p>主营业务：汽车零部件、整车代工</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>耐世特 (Nexteer)</h4>
+                        <p>主营业务：线控转向、线控制动（EMB）</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>爱尔铃克铃尔 (ElringKlinger)</h4>
+                        <p>主营业务：电池连接系统、氢燃料电池部件、密封技术</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>马瑞利 (Marelli)</h4>
+                        <p>主营业务：车灯、动力系统、电子系统</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>费尼亚 (PHINIA Delphi)</h4>
+                        <p>主营业务：燃油喷射系统、售后零部件</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>拿森智能科技</h4>
+                        <p>主营业务：线控底盘全栈技术（NBS、ESC、EMB）</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>芯擎科技</h4>
+                        <p>主营业务：车规级智能座舱芯片、自动驾驶芯片</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>芯驰科技</h4>
+                        <p>主营业务：车规级芯片（座舱/智驾/网关）</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>爱芯元智</h4>
+                        <p>主营业务：AI视觉芯片、智驾芯片</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>Momenta</h4>
+                        <p>主营业务：自动驾驶解决方案、量产智驾</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>小马智行 (Pony.ai)</h4>
+                        <p>主营业务：L4级自动驾驶</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>文远知行 (WeRide)</h4>
+                        <p>主营业务：自动驾驶、Robotaxi</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>元戎启行</h4>
+                        <p>主营业务：物理AI、L4自动驾驶</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>轻舟智航</h4>
+                        <p>主营业务：城市NOA智驾方案</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>卓驭</h4>
+                        <p>主营业务：智能驾驶解决方案</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>四维图新</h4>
+                        <p>主营业务：车联网、高精地图、智舱芯片</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>斑马智能</h4>
+                        <p>主营业务：智能座舱OS（基于AliOS）</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>科大讯飞</h4>
+                        <p>主营业务：车载AI语音大模型</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>火山引擎</h4>
+                        <p>主营业务：云服务、大模型、智能座舱</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>商汤绝影</h4>
+                        <p>主营业务：AI大模型、智驾感知</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>Unity中国</h4>
+                        <p>主营业务：3D引擎、智能座舱HMI</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>欣旺达动力</h4>
+                        <p>主营业务：动力电池、储能系统</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>瑞浦兰钧</h4>
+                        <p>主营业务：动力电池、储能电池</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>东软集团</h4>
+                        <p>主营业务：车载软件、智能座舱</p>
+                    </div>
+                </div>
+                <div class="supplier-card">
+                    <div class="supplier-info">
+                        <h4>车联天下</h4>
+                        <p>主营业务：车联网整体解决方案</p>
+                    </div>
+                </div>
             </div>
+            <p style="margin-top: 20px; font-size: 0.9em; color: #666;"><strong>信息来源：</strong>北京车展官方平台 Auto China 2026 (autobeijing.org.cn)、新华网"2026北京国际汽车展览会4月24日启幕"</p>
         </section>
         
         <section id="press-releases">
             <h2>2026年北京车展发布会安排</h2>
+            <p style="margin-top: 10px; color: #666;">2026北京车展期间共举办219场新闻发布会，主要集中在4月24日-25日媒体日。以下是官方公布的部分重点品牌发布会安排：</p>
             <div class="filter-container">
                 <label for="date-filter">日期筛选:</label>
                 <select id="date-filter" onchange="filterPressReleases()">
                     <option value="all">全部日期</option>
-                    <option value="2026-04-24">4月24日</option>
-                    <option value="2026-04-25">4月25日</option>
-                    <option value="2026-04-26">4月26日</option>
-                    <option value="2026-04-27">4月27日</option>
-                    <option value="2026-04-28">4月28日</option>
+                    <option value="2026-04-24">4月24日（媒体日）</option>
+                    <option value="2026-04-25">4月25日（媒体日）</option>
                 </select>
             </div>
             <table id="press-releases-table">
@@ -789,152 +1098,146 @@
                 </thead>
                 <tbody>
                     <tr data-date="2026-04-24">
-                        <td>宝马</td>
-                        <td>2026-04-24 10:00</td>
-                        <td>E1馆 101</td>
-                        <td>新世代iX3长轴距版、新世代i3长轴距版、全新7系、全新i7全球首发</td>
+                        <td>小米汽车</td>
+                        <td>2026-04-24 09:00</td>
+                        <td>首都国际会展中心 A4厅 A402</td>
+                        <td>雷军主讲，Xiaomi Vision GT概念超跑国内首发，公布YU7最新进展</td>
+                    </tr>
+                    <tr data-date="2026-04-24">
+                        <td>北汽集团</td>
+                        <td>2026-04-24 09:30</td>
+                        <td>北汽展台</td>
+                        <td>北汽极狐阿尔法S3预售发布会</td>
+                    </tr>
+                    <tr data-date="2026-04-24">
+                        <td>智己汽车</td>
+                        <td>2026-04-24 10:20</td>
+                        <td>顺义馆 A4厅 A402</td>
+                        <td>旗舰大满配SUV 智己LS8发布</td>
+                    </tr>
+                    <tr data-date="2026-04-24">
+                        <td>仰望汽车</td>
+                        <td>2026-04-24 10:20</td>
+                        <td>顺义馆 E3馆</td>
+                        <td>U9 Xtreme"破晓时刻"、U8L鼎藏版发布</td>
+                    </tr>
+                    <tr data-date="2026-04-24">
+                        <td>腾势汽车</td>
+                        <td>2026-04-24 10:20</td>
+                        <td>腾势展台</td>
+                        <td>全球首款智能电动超跑 腾势Z敞篷版发布</td>
+                    </tr>
+                    <tr data-date="2026-04-24">
+                        <td>宝马集团</td>
+                        <td>2026-04-24 11:00（约）</td>
+                        <td>顺义馆</td>
+                        <td>新世代i3长轴距版、新世代iX3长轴距版全球首发（基于纯电专属平台）</td>
+                    </tr>
+                    <tr data-date="2026-04-24">
+                        <td>梅赛德斯-奔驰</td>
+                        <td>2026-04-24 14:00（约）</td>
+                        <td>顺义馆</td>
+                        <td>40款车型参展，全新长轴距纯电GLC SUV全球首发</td>
                     </tr>
                     <tr data-date="2026-04-24">
                         <td>奥迪</td>
-                        <td>2026-04-24 11:30</td>
-                        <td>E1馆 102</td>
-                        <td>全新奥迪A4L全球首发</td>
+                        <td>2026-04-24 15:00（约）</td>
+                        <td>顺义馆</td>
+                        <td>纯电A6L e-tron（PPE平台、800V）与新一代燃油A6L（搭载华为乾崑智驾）双线发布</td>
                     </tr>
                     <tr data-date="2026-04-24">
-                        <td>奔驰</td>
-                        <td>2026-04-24 14:00</td>
-                        <td>E1馆 103</td>
-                        <td>全新奔驰C级全球首发</td>
-                    </tr>
-                    <tr data-date="2026-04-24">
-                        <td>沃尔沃</td>
-                        <td>2026-04-24 15:30</td>
-                        <td>E1馆 104</td>
-                        <td>全新XC60全球首发</td>
-                    </tr>
-                    <tr data-date="2026-04-24">
-                        <td>保时捷</td>
-                        <td>2026-04-24 16:30</td>
-                        <td>E1馆 105</td>
-                        <td>全新911全球首发</td>
-                    </tr>
-                    <tr data-date="2026-04-25">
-                        <td>大众</td>
-                        <td>2026-04-25 09:30</td>
-                        <td>E2馆 201</td>
-                        <td>ID. ERA 9X正式上市</td>
-                    </tr>
-                    <tr data-date="2026-04-25">
-                        <td>华为</td>
-                        <td>2026-04-25 11:00</td>
-                        <td>E2馆 202</td>
-                        <td>新款问界M9亮相</td>
-                    </tr>
-                    <tr data-date="2026-04-25">
-                        <td>理想</td>
-                        <td>2026-04-25 13:30</td>
-                        <td>E2馆 203</td>
-                        <td>全新L9首发亮相</td>
-                    </tr>
-                    <tr data-date="2026-04-25">
-                        <td>蔚来</td>
-                        <td>2026-04-25 15:00</td>
-                        <td>E2馆 204</td>
-                        <td>全新ES6全球首发</td>
-                    </tr>
-                    <tr data-date="2026-04-25">
-                        <td>小鹏</td>
-                        <td>2026-04-25 16:30</td>
-                        <td>E2馆 205</td>
-                        <td>全新P7全球首发</td>
-                    </tr>
-                    <tr data-date="2026-04-26">
-                        <td>特斯拉</td>
-                        <td>2026-04-26 10:00</td>
-                        <td>E3馆 301</td>
-                        <td>全新Model 3全球首发</td>
-                    </tr>
-                    <tr data-date="2026-04-26">
                         <td>比亚迪</td>
-                        <td>2026-04-26 11:30</td>
-                        <td>E3馆 302</td>
-                        <td>全新王朝系列车型发布</td>
+                        <td>2026-04-24（媒体日）</td>
+                        <td>顺义馆 E3馆（独馆）</td>
+                        <td>海狮08、大唐、第三代元PLUS首发；天神之眼与闪充技术专区</td>
                     </tr>
-                    <tr data-date="2026-04-26">
-                        <td>吉利</td>
-                        <td>2026-04-26 13:00</td>
-                        <td>E3馆 303</td>
-                        <td>全新星瑞全球首发</td>
+                    <tr data-date="2026-04-24">
+                        <td>奇瑞汽车</td>
+                        <td>2026-04-24（媒体日）</td>
+                        <td>顺义馆 E1馆（独馆）</td>
+                        <td>奇瑞旗下多品牌首发阵容</td>
                     </tr>
-                    <tr data-date="2026-04-26">
-                        <td>长城</td>
-                        <td>2026-04-26 14:30</td>
-                        <td>E3馆 304</td>
-                        <td>全新哈弗H6全球首发</td>
+                    <tr data-date="2026-04-24">
+                        <td>鸿蒙智行</td>
+                        <td>2026-04-24（媒体日）</td>
+                        <td>4400+平方米展台</td>
+                        <td>问界、智界、享界、尊界、尚界五大品牌13款车型集体亮相</td>
                     </tr>
-                    <tr data-date="2026-04-26">
-                        <td>长安</td>
-                        <td>2026-04-26 16:00</td>
-                        <td>E3馆 305</td>
-                        <td>全新UNI-V全球首发</td>
+                    <tr data-date="2026-04-24">
+                        <td>华为"境"系列</td>
+                        <td>2026-04-24（媒体日）</td>
+                        <td>独立品牌展台</td>
+                        <td>奕境X9、启境GT7全球首发</td>
                     </tr>
-                    <tr data-date="2026-04-27">
-                        <td>广汽传祺</td>
-                        <td>2026-04-27 09:30</td>
-                        <td>E4馆 401</td>
-                        <td>全新GS8全球首发</td>
+                    <tr data-date="2026-04-24">
+                        <td>蔚来</td>
+                        <td>2026-04-24（媒体日）</td>
+                        <td>蔚来展台</td>
+                        <td>公布丝绸之路沿线换电网络建设计划；ET9天行全主动悬架展示</td>
                     </tr>
-                    <tr data-date="2026-04-27">
-                        <td>上汽荣威</td>
-                        <td>2026-04-27 11:00</td>
-                        <td>E4馆 402</td>
-                        <td>全新i5全球首发</td>
+                    <tr data-date="2026-04-24">
+                        <td>小鹏</td>
+                        <td>2026-04-24（媒体日）</td>
+                        <td>小鹏展台</td>
+                        <td>"陆地航母"分体式飞行汽车亮相</td>
                     </tr>
-                    <tr data-date="2026-04-27">
-                        <td>东风风神</td>
-                        <td>2026-04-27 13:30</td>
-                        <td>E4馆 403</td>
-                        <td>全新AX7全球首发</td>
+                    <tr data-date="2026-04-24">
+                        <td>江汽集团</td>
+                        <td>2026-04-24（媒体日）</td>
+                        <td>江汽展台</td>
+                        <td>超豪华旗舰 尊界S800亮相</td>
                     </tr>
-                    <tr data-date="2026-04-27">
-                        <td>奇瑞</td>
-                        <td>2026-04-27 15:00</td>
-                        <td>E4馆 404</td>
-                        <td>全新瑞虎9全球首发</td>
+                    <tr data-date="2026-04-24">
+                        <td>中国一汽</td>
+                        <td>2026-04-24（媒体日）</td>
+                        <td>红旗展台</td>
+                        <td>天工序列「天辇1号」eVTOL飞行汽车亮相；HongChi全球SUV发布</td>
                     </tr>
-                    <tr data-date="2026-04-28">
-                        <td>丰田</td>
-                        <td>2026-04-28 10:00</td>
-                        <td>E5馆 501</td>
-                        <td>全新凯美瑞全球首发</td>
+                    <tr data-date="2026-04-24">
+                        <td>上汽通用五菱</td>
+                        <td>2026-04-24（媒体日）</td>
+                        <td>五菱展台</td>
+                        <td>15万以内大六座SUV 星光L发布</td>
                     </tr>
-                    <tr data-date="2026-04-28">
-                        <td>本田</td>
-                        <td>2026-04-28 11:30</td>
-                        <td>E5馆 502</td>
-                        <td>全新雅阁全球首发</td>
+                    <tr data-date="2026-04-24">
+                        <td>零跑汽车</td>
+                        <td>2026-04-24（媒体日）</td>
+                        <td>零跑展台</td>
+                        <td>Lafa5 Ultra上市（11.88-12.48万，搭载DeepSeek+通义千问双AI语音大模型）</td>
                     </tr>
-                    <tr data-date="2026-04-28">
-                        <td>日产</td>
-                        <td>2026-04-28 13:00</td>
-                        <td>E5馆 503</td>
-                        <td>全新轩逸全球首发</td>
+                    <tr data-date="2026-04-24">
+                        <td>极氪</td>
+                        <td>2026-04-24（媒体日）</td>
+                        <td>极氪展台</td>
+                        <td>极氪009亮相并开启预售</td>
                     </tr>
-                    <tr data-date="2026-04-28">
-                        <td>福特</td>
-                        <td>2026-04-28 14:30</td>
-                        <td>E5馆 504</td>
-                        <td>全新蒙迪欧全球首发</td>
+                    <tr data-date="2026-04-25">
+                        <td>广汽集团</td>
+                        <td>2026-04-25 09:30</td>
+                        <td>广汽展台</td>
+                        <td>发布年度最重磅新车</td>
                     </tr>
-                    <tr data-date="2026-04-28">
-                        <td>通用</td>
-                        <td>2026-04-28 16:00</td>
-                        <td>E5馆 505</td>
-                        <td>全新君越全球首发</td>
+                    <tr data-date="2026-04-25">
+                        <td>元戎启行</td>
+                        <td>2026-04-25 10:20</td>
+                        <td>顺义馆 A4馆 A410</td>
+                        <td>分享物理AI发展的最新思考</td>
+                    </tr>
+                    <tr data-date="2026-04-25">
+                        <td>耐世特汽车系统</td>
+                        <td>2026-04-25</td>
+                        <td>W1B03</td>
+                        <td>品牌120周年专场发布会，发布全栈式线控运动控制技术，EMB电子机械制动市场化落地</td>
+                    </tr>
+                    <tr data-date="2026-04-25">
+                        <td>爱尔铃克铃尔集团</td>
+                        <td>2026-04-25</td>
+                        <td>W3馆</td>
+                        <td>以"驭动未来，创行新境"为主题专场发布会，新能源全系列核心技术产品发布</td>
                     </tr>
                 </tbody>
             </table>
-            <p style="margin-top: 20px; font-size: 0.9em; color: #666;"><strong>信息来源：</strong>北京车展官方网站、各品牌官方发布</p>
+            <p style="margin-top: 20px; font-size: 0.9em; color: #666;"><strong>信息来源：</strong>北京车展官方平台 Auto China 2026 (autobeijing.org.cn)、新华网、汽车之家、华夏时报、新浪科技。完整219场发布会日程请以官方平台为准；表中标注"约"的时间为媒体公开报道的近似值。</p>
         </section>
         
         <footer>
@@ -993,6 +1296,448 @@
         
         // 车型详细信息数据
         const carDetails = {
+            'audi-a6letrone': {
+                title: '奥迪A6L e-tron',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>奥迪</li>
+                                <li><strong>车型：</strong>A6L e-tron</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年北京车展全球首发</li>
+                                <li><strong>价格：</strong>30.98-43.98万元（4款配置）</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>约5020mm</li>
+                                <li><strong>轴距：</strong>约3020mm</li>
+                                <li><strong>座位数：</strong>5座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>专为国内市场打造的加长行政纯电轿车，基于PPE平台开发，采用800V高压快充架构与全铝底盘。搭载quattro四驱系统的顶配"乾崑智驾版"配备20喇叭音响与全套智驾功能。共推出4款配置，覆盖从入门长续航到旗舰智驾版本。外观融合德系豪华稳重与新能源科技元素，主打"家用商务一车兼顾"的定位。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>共享800V高压架构、全铝底盘与千兆智能架构。长续航版官方指导价30.98万元，入门即满足日常通勤与商务需求；顶配quattro乾崑智驾版43.98万元，双电机四驱带来强劲动力。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：汽车之家、车家号（2026款一汽奥迪A6L e-tron四款车型全面解析）</p>
+                `
+            },
+            'audi-a6l': {
+                title: '奥迪新一代A6L（燃油版）',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>奥迪</li>
+                                <li><strong>车型：</strong>新一代A6L（燃油版）</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年北京车展首发</li>
+                                <li><strong>价格：</strong>待公布</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>约5020mm+</li>
+                                <li><strong>轴距：</strong>约3020mm+</li>
+                                <li><strong>座位数：</strong>5座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>奥迪同时布局燃油车和纯电车两条赛道。新一代燃油版A6L首次搭载华为乾崑智驾系统，让传统燃油车实现智能化升级，是德系豪华品牌在华本土化合作的重要案例。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>具体参数待公布。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：华夏时报、北京车展官方平台</p>
+                `
+            },
+            'mercedes-glc-ev': {
+                title: '奔驰长轴距纯电GLC SUV',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>梅赛德斯-奔驰</li>
+                                <li><strong>车型：</strong>长轴距纯电GLC SUV</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年北京车展全球首发</li>
+                                <li><strong>价格：</strong>待公布</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>约4800mm+</li>
+                                <li><strong>轴距：</strong>约2977mm</li>
+                                <li><strong>座位数：</strong>5座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>本届车展奔驰携40款车型参展，其中长轴距纯电GLC SUV完成全球首发。作为奔驰电动化反击的代表车型，标志着奔驰纯电专属平台车型的加速落地。车身基于奔驰长轴距GLC SUV的纯电专属架构打造。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>具体参数待公布。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：华夏时报、北京车展官方平台</p>
+                `
+            },
+            'yangwang-u9x': {
+                title: '仰望U9 Xtreme',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>仰望</li>
+                                <li><strong>车型：</strong>U9 Xtreme"破晓时刻"</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年北京车展全球首发</li>
+                                <li><strong>价格：</strong>待公布</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>约4966mm</li>
+                                <li><strong>轴距：</strong>约2950mm</li>
+                                <li><strong>座位数：</strong>2座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>仰望汽车在顺义馆E3馆举办发布会推出U9 Xtreme"破晓时刻"特别版，是比亚迪独馆E3馆的重磅超跑车型，搭载云辇系统与四电机独立驱动技术。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>具体参数待公布。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：汽车之家、北京车展官方平台</p>
+                `
+            },
+            'yangwang-u8l': {
+                title: '仰望U8L鼎藏版',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>仰望</li>
+                                <li><strong>车型：</strong>U8L鼎藏版</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年北京车展首发</li>
+                                <li><strong>价格：</strong>待公布</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>约5360mm</li>
+                                <li><strong>轴距：</strong>约3260mm</li>
+                                <li><strong>座位数：</strong>5座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>仰望U8L鼎藏版为豪华旗舰越野车型，搭载易四方技术与云辇-P智能液压车身控制系统，在U8基础上加长轴距与车身，强化豪华气场与越野能力。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>具体参数待公布。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：汽车之家、北京车展官方平台</p>
+                `
+            },
+            'tengshi-z': {
+                title: '腾势Z敞篷版',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>腾势</li>
+                                <li><strong>车型：</strong>Z敞篷版</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年北京车展首发</li>
+                                <li><strong>价格：</strong>待公布</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>待公布</li>
+                                <li><strong>轴距：</strong>待公布</li>
+                                <li><strong>座位数：</strong>2座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>全球首款智能电动超跑敞篷版，在腾势展台发布，是腾势Z系列的衍生敞篷车型，体现比亚迪在高性能电动跑车领域的产品延伸。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>具体参数待公布。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：汽车之家、北京车展官方平台</p>
+                `
+            },
+            'zhiji-ls8': {
+                title: '智己LS8',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>智己汽车</li>
+                                <li><strong>车型：</strong>LS8</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年北京车展首发</li>
+                                <li><strong>价格：</strong>待公布</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>约5100mm+</li>
+                                <li><strong>轴距：</strong>约3100mm+</li>
+                                <li><strong>座位数：</strong>6座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>智己汽车旗舰大满配SUV，定位中大型6座豪华纯电SUV，在A4厅A402展位举办发布会，是智己冲击高端SUV市场的重磅车型。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>具体参数待公布。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：汽车之家、北京车展官方平台</p>
+                `
+            },
+            'arcfox-s3': {
+                title: '北汽极狐阿尔法S3',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>北汽极狐</li>
+                                <li><strong>车型：</strong>阿尔法S3</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年4月24日北京车展预售</li>
+                                <li><strong>预计价格：</strong>15-20万元</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>约4860mm</li>
+                                <li><strong>轴距：</strong>约2900mm</li>
+                                <li><strong>座位数：</strong>5座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>定位大空间越级纯电家轿，在北汽集团发布会上正式开启预售，是北汽极狐品牌面向主流家轿市场的战略车型。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>具体参数待公布。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：车嚓网、北京车展官方平台</p>
+                `
+            },
+            'hongqi-tiannian1': {
+                title: '红旗天工序列「天辇1号」eVTOL飞行汽车',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>中国一汽红旗</li>
+                                <li><strong>车型：</strong>天工序列「天辇1号」</li>
+                                <li><strong>类型：</strong>概念车</li>
+                                <li><strong>上市时间：</strong>2026年北京车展亮相</li>
+                                <li><strong>价格：</strong>概念车</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>技术特征</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>构型：</strong>分体式陆空可分离架构</li>
+                                <li><strong>动力：</strong>多旋翼电动垂直起降</li>
+                                <li><strong>起降：</strong>无需跑道即可完成低空通勤飞行</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>国产自研飞行汽车，采用分体式陆空可分离架构、多旋翼电动垂直起降设计，无需跑道即可完成低空通勤飞行。以极具未来科技感的外观与硬核自研技术，成为本届北京车展跨界创新、关注度极高的重磅展品，彰显中国汽车品牌从地面交通向三维立体出行生态突破的技术实力。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>应用前景</h3>
+                        <p>面向低空经济与全域智慧出行场景，是红旗向未来出行领域延伸的战略探索产品。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：北京车展官方平台、华夏时报</p>
+                `
+            },
+            'wuling-xingguangl': {
+                title: '上汽通用五菱星光L大六座SUV',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>上汽通用五菱</li>
+                                <li><strong>车型：</strong>星光L 大六座SUV</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年北京车展发布</li>
+                                <li><strong>价格：</strong>15万元以内</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>约4900mm+</li>
+                                <li><strong>轴距：</strong>约2800mm+</li>
+                                <li><strong>座位数：</strong>6座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>"人民需要什么，五菱就造什么！"——上汽通用五菱在北京车展期间发布十五万元以内的大六座车型。星光L大六座SUV共5款车色，采用顶级车漆，即便是经历风吹日晒也能精致如初。凭借极低的日常充电成本，为城市通勤提供高经济性的解决方案，被形象比喻为"一杯奶茶解决通勤成本"。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>具体参数待公布。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：北京车展官方平台</p>
+                `
+            },
+            'xiaomi-visiongt': {
+                title: '小米Xiaomi Vision GT 概念车',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>小米汽车</li>
+                                <li><strong>车型：</strong>Xiaomi Vision GT</li>
+                                <li><strong>类型：</strong>概念车</li>
+                                <li><strong>上市时间：</strong>2026年北京车展国内首发</li>
+                                <li><strong>价格：</strong>概念车</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>展台信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>位置：</strong>首都国际会展中心 A4厅 A402</li>
+                                <li><strong>发布会：</strong>4月24日 09:00 雷军主讲</li>
+                                <li><strong>展后活动：</strong>雷军40分钟逛展直播</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>Xiaomi Vision GT概念超跑在北京车展国内首次亮相，全面展示小米汽车技术进展与生态布局。与新一代SU7、SU7 Ultra、YU7等车型同台展出。技术专区放置新一代SU7全拆解车身，可直观看到钢铝混合车身和安全结构设计。展台还设置了"人车家全生态体验区"，可现场感受智能座舱、车家联动等功能。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>市场成绩</h3>
+                        <p>小米新一代SU7锁单量已超6万台、先期交付达2.6万台，小米汽车以用户思维与技术创新成为智能电动赛道的核心力量。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：新浪科技、北京车展官方平台</p>
+                `
+            },
+            'xiaomi-yu7gt': {
+                title: '小米YU7 GT',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>小米汽车</li>
+                                <li><strong>车型：</strong>YU7 GT</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年5月底发布</li>
+                                <li><strong>价格：</strong>待公布</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>约4999mm+</li>
+                                <li><strong>轴距：</strong>约3000mm</li>
+                                <li><strong>座位数：</strong>5座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>小米集团创始人、董事长兼CEO雷军在车展现场正式官宣小米YU7 GT将于5月底发布。作为小米汽车的运动衍生车型，预计将延续小米的科技感设计理念，配备先进的智能驾驶辅助系统和互联功能，提供高性能的驾驶体验。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>预计搭载高性能电动动力系统，具体参数待公布。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：北京车展官方平台、人民日报</p>
+                `
+            },
+            'xiaomi-su7': {
+                title: '小米新一代SU7',
+                content: `
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                            <h3>基本信息</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>品牌：</strong>小米汽车</li>
+                                <li><strong>车型：</strong>新一代SU7</li>
+                                <li><strong>类型：</strong>新车型</li>
+                                <li><strong>上市时间：</strong>2026年北京车展展示</li>
+                                <li><strong>价格：</strong>21.59-29.99万元</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3>车身尺寸</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li><strong>车长：</strong>4997mm</li>
+                                <li><strong>轴距：</strong>3000mm</li>
+                                <li><strong>座位数：</strong>5座</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>车型亮点</h3>
+                        <p>新一代SU7在北京车展亮相，并展示了全拆解车身，可直观看到钢铝混合车身和安全结构设计。小米汽车延续强势表现，新一代SU7锁单量已超6万台、先期交付达2.6万台。</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <h3>动力系统</h3>
+                        <p>具体参数以小米官方公布为准。</p>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：新浪科技、北京车展官方平台</p>
+                `
+            },
             'bmw-ix3': {
                 title: '宝马新世代iX3长轴距版',
                 content: `
@@ -1852,36 +2597,37 @@
                 `
             },
             'xiaomi-yu7': {
-                title: '小米YU7 GT',
+                title: '小米YU7',
                 content: `
                     <div style="display: flex; flex-wrap: wrap;">
                         <div style="flex: 1; min-width: 300px; margin-right: 20px;">
                             <h3>基本信息</h3>
                             <ul style="list-style: none; padding: 0;">
-                                <li><strong>品牌：</strong>小米</li>
-                                <li><strong>车型：</strong>YU7 GT</li>
+                                <li><strong>品牌：</strong>小米汽车</li>
+                                <li><strong>车型：</strong>YU7</li>
                                 <li><strong>类型：</strong>新车型</li>
-                                <li><strong>上市时间：</strong>2026年年内上市</li>
-                                <li><strong>价格：</strong>待公布</li>
+                                <li><strong>上市时间：</strong>2026年北京车展公布并已上市</li>
+                                <li><strong>价格：</strong>25.35-32.99万元</li>
                             </ul>
                         </div>
                         <div style="flex: 1; min-width: 300px;">
                             <h3>车身尺寸</h3>
                             <ul style="list-style: none; padding: 0;">
-                                <li><strong>车长：</strong>4900+mm</li>
-                                <li><strong>轴距：</strong>2900+mm</li>
+                                <li><strong>车长：</strong>4999mm</li>
+                                <li><strong>轴距：</strong>3000mm</li>
                                 <li><strong>座位数：</strong>5座</li>
                             </ul>
                         </div>
                     </div>
                     <div style="margin-top: 20px;">
                         <h3>车型亮点</h3>
-                        <p>小米YU7 GT在北京车展上预告上市计划，作为小米汽车的新车型，预计将延续小米的科技感设计理念，配备先进的智能驾驶辅助系统和互联功能，提供高性能的驾驶体验。</p>
+                        <p>小米YU7为小米汽车SUV系列车型，于2026年北京车展公布最新进展，与新一代SU7、SU7 Ultra、Xiaomi Vision GT概念车同台展出。车展现场设置了三大体验区：新一代SU7全拆解车身展示区、智能技术专区、人车家全生态体验区。</p>
                     </div>
                     <div style="margin-top: 20px;">
-                        <h3>动力系统</h3>
-                        <p>预计搭载高性能电动动力系统，提供长续航版本。</p>
+                        <h3>市场表现</h3>
+                        <p>新一代SU7锁单量已超6万台、先期交付达2.6万台，体现小米汽车在智能电动赛道的强势表现。</p>
                     </div>
+                    <p style="margin-top: 15px; font-size: 0.85em; color: #888;">信息来源：新浪科技、北京车展官方平台</p>
                 `
             }
         };
