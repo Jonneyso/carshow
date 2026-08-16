@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年成都车展信息 | 第二十八届</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --brand-color-start: #f093fb; --brand-color-end: #f5576c; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .brand-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; background: white; padding: 12px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .brand-tab { flex: 1; min-width: 90px; text-align: center; padding: 12px 16px; text-decoration: none; color: #666; font-weight: bold; border-radius: 8px; transition: all 0.3s ease; }
+        .brand-tab:hover { background: #f0f0f0; color: #333; }
+        .brand-tab.active { color: white; }
+        .brand-tab.beijing.active { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .brand-tab.shanghai.active { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .brand-tab.guangzhou.active { background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%); }
+        .brand-tab.chengdu.active { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .year-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+        .year-tab { padding: 8px 18px; text-decoration: none; color: var(--brand-color-start); background: white; border: 2px solid var(--brand-color-start); border-radius: 20px; font-size: 0.9em; font-weight: bold; transition: all 0.3s ease; }
+        .year-tab:hover { background: #fdf5fa; }
+        .year-tab.active { background: linear-gradient(135deg, var(--brand-color-start) 0%, var(--brand-color-end) 100%); color: white; border-color: transparent; }
+        header { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 40px 0; text-align: center; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2em; opacity: 0.9; }
+        section { background: white; padding: 30px; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h2 { color: #f5576c; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+        h3 { color: #555; margin: 15px 0 10px 0; }
+        .overview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .overview-item { background: #fdf5fa; padding: 20px; border-radius: 8px; text-align: center; transition: transform 0.3s ease; }
+        .overview-item:hover { transform: translateY(-5px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .overview-item h4 { color: #f5576c; margin-bottom: 10px; }
+        .overview-item p { font-size: 1.1em; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f5576c; color: white; font-weight: bold; }
+        tr:hover { background-color: #fdf5fa; }
+        .filter-container { margin-bottom: 20px; }
+        .filter-container label { margin-right: 10px; }
+        .filter-container select { padding: 8px 12px; border-radius: 6px; border: 1px solid #ddd; font-size: 1em; }
+        .suppliers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
+        .supplier-card { background: #fdf5fa; padding: 15px; border-radius: 8px; border-left: 4px solid #f5576c; transition: transform 0.3s ease; }
+        .supplier-card:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .supplier-card h4 { color: #f5576c; margin-bottom: 5px; }
+        .supplier-card p { font-size: 0.9em; color: #666; }
+        .supplier-card .field { display: inline-block; background: #fdf0f5; color: #f5576c; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; margin-top: 5px; }
+        .highlight-card { background: #fdf5fa; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #f5576c; }
+        .highlight-card h3 { color: #f5576c; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; }
+        .modal-content { background: white; margin: 5% auto; padding: 30px; border-radius: 10px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; }
+        .modal-content h3 { color: #f5576c; margin-bottom: 15px; }
+        .modal-content .detail-section { margin-bottom: 15px; }
+        .modal-content .detail-section h4 { color: #555; margin-bottom: 5px; border-bottom: 1px solid #eee; padding-bottom: 3px; }
+        .modal-content .source { font-size: 0.8em; color: #999; margin-top: 15px; font-style: italic; }
+        .close { float: right; font-size: 1.5em; cursor: pointer; color: #999; }
+        .car-link { color: #f5576c; text-decoration: none; cursor: pointer; }
+        .car-link:hover { text-decoration: underline; }
+        footer { text-align: center; color: #888; padding: 20px; font-size: 0.9em; }
+        @media (max-width: 768px) { h1 { font-size: 1.8em; } .brand-tab { min-width: 70px; padding: 10px 8px; font-size: 0.85em; } table { font-size: 0.8em; } th, td { padding: 6px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="brand-nav">
+            <a href="index.html" class="brand-tab">总览</a>
+            <a href="beijing-2026.html" class="brand-tab beijing">北京车展</a>
+            <a href="shanghai-2025.html" class="brand-tab shanghai">上海车展</a>
+            <a href="guangzhou-2025.html" class="brand-tab guangzhou">广州车展</a>
+            <a href="chengdu-2026.html" class="brand-tab chengdu active">成都车展</a>
+        </nav>
+        <div class="year-nav">
+            <a href="chengdu-2024.html" class="year-tab">2024（第二十七届）</a>
+            <a href="chengdu-2025.html" class="year-tab active">2025（第二十八届）</a>
+            <a href="chengdu-2026.html" class="year-tab">2026（第二十九届）</a>
+        </div>
+
+        <header>
+            <h1>2025 成都车展</h1>
+            <p class="subtitle">第二十八届成都国际汽车展览会 · 领潮而立·向新而行</p>
+        </header>
+
+        <section id="overview">
+            <h2>展会概览</h2>
+            <div class="overview-grid">
+                <div class="overview-item"><h4>届数</h4><p>第二十八届</p></div>
+                <div class="overview-item"><h4>主题</h4><p>领潮而立·向新而行</p></div>
+                <div class="overview-item"><h4>时间</h4><p>2025.8.29 - 9.7</p></div>
+                <div class="overview-item"><h4>媒体日</h4><p>8月29日</p></div>
+                <div class="overview-item"><h4>场地</h4><p>中国西部国际博览城</p></div>
+                <div class="overview-item"><h4>展览面积</h4><p>22万㎡（12馆+室外）</p></div>
+                <div class="overview-item"><h4>参展企业</h4><p>近120个品牌</p></div>
+                <div class="overview-item"><h4>展车总数</h4><p>逾1600台</p></div>
+                <div class="overview-item"><h4>首发车型</h4><p>70款（首日）</p></div>
+                <div class="overview-item"><h4>发布会</h4><p>61场</p></div>
+                <div class="overview-item"><h4>观众人次</h4><p>91.02万</p></div>
+                <div class="overview-item"><h4>订单/成交额</h4><p>33745台/57.53亿元</p></div>
+                <div class="overview-item"><h4>媒体</h4><p>3480家/10030名记者</p></div>
+            </div>
+            <p style="margin-top:15px;font-size:0.85em;color:#999;">数据来源：成都国际车展官方（cd-motorshow.com）、成都日报、国际在线、车展日</p>
+        </section>
+
+        <section id="comparison">
+            <h2>车展对比</h2>
+            <p>2025 年三大 A 级车展横向对比：</p>
+            <table>
+                <thead><tr><th>项目</th><th>2025 上海车展</th><th>2025 成都车展</th><th>2025 广州车展</th></tr></thead>
+                <tbody>
+                    <tr><td>届数</td><td>第二十一届</td><td>第二十八届</td><td>第二十三届</td></tr>
+                    <tr><td>时间</td><td>4.23-5.2</td><td>8.29-9.7</td><td>11.21-30</td></tr>
+                    <tr><td>场地</td><td>国家会展中心（上海）</td><td>中国西部国际博览城</td><td>广州琶洲会展中心</td></tr>
+                    <tr><td>展览面积</td><td>超过36万㎡</td><td>22万㎡</td><td>—</td></tr>
+                    <tr><td>参展品牌</td><td>近1000家</td><td>近120个</td><td>—</td></tr>
+                    <tr><td>展车总数</td><td>1366台</td><td>逾1600台</td><td>—</td></tr>
+                    <tr><td>首发车</td><td>163台</td><td>70款（首日）</td><td>—</td></tr>
+                    <tr><td>观众人次</td><td>101万</td><td>91.02万</td><td>—</td></tr>
+                    <tr><td>主题</td><td>拥抱创新 共赢未来</td><td>领潮而立·向新而行</td><td>新科技·新生活</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:15px;font-size:0.85em;color:#999;">数据来源：各车展官方平台及权威媒体</p>
+        </section>
+
+        <section id="models">
+            <h2>参展车型</h2>
+            <div class="filter-container">
+                <label for="brand-filter">按品牌筛选：</label>
+                <select id="brand-filter" onchange="filterModels()">
+                    <option value="all">全部品牌</option>
+                    <option value="byd">比亚迪</option>
+                    <option value="huawei">鸿蒙智行</option>
+                    <option value="xiaomi">小米</option>
+                    <option value="nio">蔚来</option>
+                    <option value="li">理想</option>
+                    <option value="xpeng">小鹏</option>
+                    <option value="bmw">宝马</option>
+                    <option value="mercedes">奔驰</option>
+                    <option value="chery">奇瑞</option>
+                    <option value="ford">福特</option>
+                </select>
+                <label for="type-filter" style="margin-left:20px;">按类型：</label>
+                <select id="type-filter" onchange="filterModels()">
+                    <option value="all">全部类型</option>
+                    <option value="sedan">轿车</option>
+                    <option value="suv">SUV</option>
+                    <option value="mpv">MPV</option>
+                </select>
+            </div>
+            <table id="models-table">
+                <thead><tr><th>品牌</th><th>车型</th><th>类型</th><th>动力</th><th>亮点</th></tr></thead>
+                <tbody>
+                    <tr data-brand="byd" data-type="suv"><td>比亚迪</td><td><a class="car-link" onclick="showCarDetails('byd-fangchengbao-7')">方程豹钛7</a></td><td>SUV</td><td>增程</td><td>首发</td></tr>
+                    <tr data-brand="byd" data-type="sedan"><td>比亚迪</td><td>2026款海豹07 DM-i</td><td>轿车</td><td>插混</td><td>首发</td></tr>
+                    <tr data-brand="byd" data-type="sedan"><td>比亚迪</td><td>秦L EV</td><td>轿车</td><td>纯电</td><td>首发</td></tr>
+                    <tr data-brand="huawei" data-type="suv"><td>鸿蒙智行</td><td><a class="car-link" onclick="showCarDetails('zhijie-r7-2025')">智界新R7</a></td><td>SUV</td><td>纯电</td><td>25日已发布</td></tr>
+                    <tr data-brand="huawei" data-type="sedan"><td>鸿蒙智行</td><td>智界新S7</td><td>轿车</td><td>纯电</td><td>现场亮相</td></tr>
+                    <tr data-brand="huawei" data-type="suv"><td>鸿蒙智行</td><td><a class="car-link" onclick="showCarDetails('wenjie-m8-ev')">问界M8纯电版</a></td><td>SUV</td><td>纯电</td><td>亮相</td></tr>
+                    <tr data-brand="xiaomi" data-type="sedan"><td>小米</td><td><a class="car-link" onclick="showCarDetails('xiaomi-su7-ultra')">小米SU7 Ultra纽北限量版</a></td><td>轿车</td><td>纯电</td><td>首次展出</td></tr>
+                    <tr data-brand="nio" data-type="suv"><td>蔚来</td><td><a class="car-link" onclick="showCarDetails('nio-es8-gen3')">第三代ES8</a></td><td>SUV</td><td>纯电</td><td>换代亮相</td></tr>
+                    <tr data-brand="li" data-type="suv"><td>理想</td><td><a class="car-link" onclick="showCarDetails('li-i8')">理想i8</a></td><td>SUV</td><td>纯电</td><td>六座纯电SUV</td></tr>
+                    <tr data-brand="xpeng" data-type="sedan"><td>小鹏</td><td><a class="car-link" onclick="showCarDetails('xpeng-p7-2025')">全新改款小鹏P7</a></td><td>轿车</td><td>纯电</td><td>星舰设计</td></tr>
+                    <tr data-brand="bmw" data-type="sedan"><td>宝马</td><td><a class="car-link" onclick="showCarDetails('bmw-m2cs')">全新BMW M2 CS</a></td><td>轿车</td><td>燃油</td><td>车展上市</td></tr>
+                    <tr data-brand="mercedes" data-type="sedan"><td>奔驰</td><td>全新AMG CLE 53 4MATIC+敞篷轿跑车</td><td>轿车</td><td>燃油</td><td>发布</td></tr>
+                    <tr data-brand="mercedes" data-type="sedan"><td>奔驰</td><td>全新纯电CLA</td><td>轿车</td><td>纯电</td><td>展示</td></tr>
+                    <tr data-brand="chery" data-type="suv"><td>奇瑞</td><td><a class="car-link" onclick="showCarDetails('chery-zongheng')">捷途纵横序列</a></td><td>SUV</td><td>电混</td><td>首秀</td></tr>
+                    <tr data-brand="ford" data-type="suv"><td>福特</td><td><a class="car-link" onclick="showCarDetails('ford-bronco-ev')">福特烈马新能源</a></td><td>SUV</td><td>新能源</td><td>全球首秀</td></tr>
+                    <tr data-brand="all" data-type="suv"><td>别克</td><td>至境SUV先导车</td><td>SUV</td><td>新能源</td><td>国内首秀</td></tr>
+                    <tr data-brand="all" data-type="sedan"><td>别克</td><td>至境轿车先导车</td><td>轿车</td><td>新能源</td><td>国内首秀</td></tr>
+                    <tr data-brand="all" data-type="mpv"><td>别克</td><td>至境MPV先导车</td><td>MPV</td><td>新能源</td><td>国内首秀</td></tr>
+                    <tr data-brand="all" data-type="sedan"><td>上汽大众</td><td>新凌渡L</td><td>轿车</td><td>燃油</td><td>上市</td></tr>
+                    <tr data-brand="all" data-type="suv"><td>smart</td><td>smart精灵#5（EHD电混）</td><td>SUV</td><td>插混</td><td>首发</td></tr>
+                    <tr data-brand="all" data-type="sedan"><td>smart</td><td>smart#1 BRABUS性能版</td><td>轿车</td><td>纯电</td><td>发布</td></tr>
+                    <tr data-brand="all" data-type="suv"><td>乐道</td><td>乐道L90</td><td>SUV</td><td>纯电</td><td>展台核心</td></tr>
+                    <tr data-brand="all" data-type="sedan"><td>firefly萤火虫</td><td>"游牧美拉德"特别版</td><td>轿车</td><td>纯电</td><td>首发亮相</td></tr>
+                    <tr data-brand="all" data-type="sedan"><td>一汽丰田</td><td>bZ5</td><td>轿车</td><td>纯电</td><td>亮相</td></tr>
+                    <tr data-brand="all" data-type="suv"><td>奥迪</td><td>奥迪Q6L e-tron</td><td>SUV</td><td>纯电</td><td>已上市</td></tr>
+                    <tr data-brand="all" data-type="sedan"><td>大众</td><td>朗逸PRO</td><td>轿车</td><td>燃油</td><td>亮相</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:15px;font-size:0.85em;color:#999;">数据来源：成都国际车展官方、成都日报、国际在线、车展日</p>
+        </section>
+
+        <section id="suppliers">
+            <h2>参展供应商</h2>
+            <p>本届车展涵盖整车、改装车、人形机器人、三电系统等产业热点，重点企业包括：</p>
+            <div class="suppliers-grid">
+                <div class="supplier-card"><h4>比亚迪</h4><p>兆瓦闪充、天神之眼智驾、易三方、云辇Z、灵鸢车载无人机</p><span class="field">整车+三电</span></div>
+                <div class="supplier-card"><h4>华为鸿蒙智行</h4><p>问界、智界、享界、尊界、尚界"五界"全栈智能汽车解决方案</p><span class="field">智能驾驶</span></div>
+                <div class="supplier-card"><h4>宁德时代</h4><p>动力电池、超充电池技术</p><span class="field">动力电池</span></div>
+                <div class="supplier-card"><h4>小鹏汇天</h4><p>飞行汽车、低空出行、"三体复合翼"飞行汽车</p><span class="field">飞行汽车</span></div>
+                <div class="supplier-card"><h4>广汽</h4><p>多旋翼飞行汽车GOVYAirCar</p><span class="field">飞行汽车</span></div>
+                <div class="supplier-card"><h4>红旗</h4><p>天辇1号飞行汽车</p><span class="field">飞行汽车</span></div>
+                <div class="supplier-card"><h4>奇瑞</h4><p>人形机器人Morninegen-1</p><span class="field">人形机器人</span></div>
+                <div class="supplier-card"><h4>小鹏</h4><p>IRON机器人</p><span class="field">人形机器人</span></div>
+                <div class="supplier-card"><h4>地平线</h4><p>智能驾驶芯片</p><span class="field">智驾芯片</span></div>
+                <div class="supplier-card"><h4>黑芝麻智能</h4><p>自动驾驶芯片</p><span class="field">智驾芯片</span></div>
+                <div class="supplier-card"><h4>速腾聚创</h4><p>激光雷达</p><span class="field">激光雷达</span></div>
+                <div class="supplier-card"><h4>禾赛科技</h4><p>激光雷达</p><span class="field">激光雷达</span></div>
+                <div class="supplier-card"><h4>大疆车载</h4><p>智能驾驶方案</p><span class="field">智能驾驶</span></div>
+                <div class="supplier-card"><h4>具身科技</h4><p>成都本地机器人研发，未来智慧生活展区</p><span class="field">人形机器人</span></div>
+            </div>
+            <p style="margin-top:15px;font-size:0.85em;color:#999;">数据来源：成都日报、成都本地宝、国际在线</p>
+        </section>
+
+        <section id="press-releases">
+            <h2>发布会安排</h2>
+            <div class="filter-container">
+                <label for="date-filter">按日期筛选：</label>
+                <select id="date-filter" onchange="filterPressReleases()">
+                    <option value="all">全部日期</option>
+                    <option value="8-29">8月29日（媒体日）</option>
+                    <option value="8-30">8月30日（专业观众日）</option>
+                    <option value="8-31">8月31日（专业观众日）</option>
+                </select>
+            </div>
+            <table id="press-table">
+                <thead><tr><th>时间</th><th>品牌</th><th>发布会内容</th><th>重点车型</th></tr></thead>
+                <tbody>
+                    <tr data-date="8-29"><td>8月29日</td><td>比亚迪</td><td>方程豹钛7、海豹07 DM-i、秦L EV首发，"兆瓦闪充"技术展示</td><td>方程豹钛7</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>鸿蒙智行</td><td>"五界"集体亮相，智界新R7、新S7、问界M8纯电版集中展出</td><td>问界M8纯电版</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>小米汽车</td><td>SU7 Ultra纽北限量版首次展出</td><td>小米SU7 Ultra</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>蔚来</td><td>第三代ES8换代亮相</td><td>第三代ES8</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>理想汽车</td><td>六座纯电SUV理想i8发布</td><td>理想i8</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>奇瑞集团</td><td>5号馆包馆，捷途纵横序列首秀</td><td>捷途纵横序列</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>宝马</td><td>9款BMW M性能车型齐聚，全新BMW M2 CS上市</td><td>BMW M2 CS</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>奔驰</td><td>全新AMG CLE 53敞篷轿跑车发布，纯电CLA展示</td><td>AMG CLE 53</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>福特中国</td><td>烈马新能源全球首秀</td><td>福特烈马新能源</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>别克</td><td>"至境"高端新能源子品牌首秀，三款先导车亮相</td><td>至境SUV/轿车/MPV</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>长安系</td><td>10号馆包馆，长安、马自达、启源、阿维塔、深蓝五大品牌</td><td>多款长安车型</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>上汽大众</td><td>新凌渡L上市</td><td>新凌渡L</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>smart</td><td>EHD超级电混技术发布，smart#5首发</td><td>smart#5</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>乐道</td><td>全新L90亮相</td><td>乐道L90</td></tr>
+                    <tr data-date="8-29"><td>8月29日</td><td>小鹏</td><td>全新改款P7亮相，IRON机器人首秀</td><td>小鹏P7</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:15px;font-size:0.85em;color:#999;">数据来源：成都日报、国际在线、车展日</p>
+        </section>
+
+        <section id="highlights">
+            <h2>核心看点</h2>
+            <div class="highlight-card">
+                <h3>1. 自主品牌"包馆"大规模集结</h3>
+                <p>比亚迪、奇瑞、长安首次以"包馆"形式亮相：比亚迪独占9号馆（王朝、海洋、方程豹、腾势、仰望），奇瑞集团包5号馆携五大品牌，长安系五大品牌汇聚10号馆。长城汽车以超4000平方米核心展区强势登陆，吉利、北汽等品牌展台面积较往届显著扩容。中国自主品牌乘用车销量占比突破68%，新能源渗透率超45%。</p>
+            </div>
+            <div class="highlight-card">
+                <h3>2. 鸿蒙智行"五界"齐聚首秀</h3>
+                <p>鸿蒙智行首度集齐"五界"——问界、智界、享界、尊界、尚界五大品牌矩阵集体亮相。25日发布的智界新R7、智界新S7、问界M8纯电版等车型在现场集中亮相，覆盖入门到豪华全价位区间，为不同层级消费者提供智能化出行选择。</p>
+            </div>
+            <div class="highlight-card">
+                <h3>3. 新势力技术爆发，跨界创新亮眼</h3>
+                <p>新势力集体爆发：小米SU7 Ultra纽北限量版、蔚来第三代ES8、理想i8、乐道L90、全新小鹏P7等智能化新品密集登场。本届车展引入具身智能机器人充当"智"愿者，小鹏IRON机器人、奇瑞Morninegen-1人形机器人首次亮相；红旗天辇1号、广汽GOVYAirCar、奇瑞"三体复合翼"飞行汽车等未来出行方案集体呈现。</p>
+            </div>
+            <div class="highlight-card">
+                <h3>4. 豪华品牌分化加剧，德系三强格局重塑</h3>
+                <p>豪华品牌阵营分化明显：宝马、奔驰继续强势表现——宝马9款BMW M性能车型齐聚，全新BMW M2 CS上市；奔驰推出全新AMG CLE 53敞篷轿跑车并展示纯电CLA。奥迪则日渐式微，仅奥迪Q6L e-tron、A5L两款已上市新车亮相，销量担当奥迪A6L、Q5L均为2018年前发布且尚未换代。沃尔沃、林肯、凯迪拉克则分别带来沃尔沃XC70、林肯航海家总裁版、凯迪拉克全新XT5等新作。</p>
+            </div>
+            <div class="highlight-card">
+                <h3>5. 车展邂逅烟火气，"人车生活"共融</h3>
+                <p>组委会创新突破传统工业展会边界，深度融合城市文旅、潮流社交与新消费趋势：联袂小红书等平台共创"冰饮狂欢节"；秦皇湖畔打造"极速声浪汽车文化嘉年华"及沉浸式草坪音乐会；联动成都市宠物协会打造"人车宠共生"主题，举办宠物领养、公益捐赠等活动；携手本地主流汽车集团打造专属购车优惠、快闪体验、趣味打卡等。</p>
+            </div>
+            <div class="highlight-card">
+                <h3>6. 消费活力强劲，订单延续盛况</h3>
+                <p>据不完全统计，展会十天累计参与观众达91.02万人次，共产生订单33745台、成交金额57.53亿元，延续往年盛况。订单量与关注度同步攀升，印证了成都作为"中国汽车消费第一城"的市场活力与辐射力，为区域消费提振与汽车产业高质量发展注入新动能。</p>
+            </div>
+            <p style="margin-top:15px;font-size:0.85em;color:#999;">数据来源：成都国际车展官方（cd-motorshow.com）、成都日报、国际在线</p>
+        </section>
+
+        <footer>
+            <p>2025 成都车展（第二十八届）| 数据来源：cd-motorshow.com、成都日报、国际在线、成都本地宝、车展日</p>
+        </footer>
+    </div>
+
+    <div id="carModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        function filterModels() {
+            const brand = document.getElementById('brand-filter').value;
+            const type = document.getElementById('type-filter').value;
+            const rows = document.querySelectorAll('#models-table tbody tr');
+            rows.forEach(row => {
+                const brandMatch = brand === 'all' || row.dataset.brand === brand || row.dataset.brand === 'all';
+                const typeMatch = type === 'all' || row.dataset.type === type;
+                row.style.display = (brandMatch && typeMatch) ? '' : 'none';
+            });
+        }
+        function filterPressReleases() {
+            const date = document.getElementById('date-filter').value;
+            const rows = document.querySelectorAll('#press-table tbody tr');
+            rows.forEach(row => { row.style.display = (date === 'all' || row.dataset.date === date) ? '' : 'none'; });
+        }
+        const carDetails = {
+            'byd-fangchengbao-7': { name:'方程豹钛7', basic:'比亚迪旗下方程豹品牌中大型增程式SUV', size:'中大型SUV', highlight:'搭载比亚迪最新增程式动力技术，主打硬派新能源越野', power:'增程式动力', source:'来源：比亚迪官方、成都日报' },
+            'zhijie-r7-2025': { name:'智界新R7', basic:'鸿蒙智行智界品牌换代R7车型', size:'中大型轿跑SUV', highlight:'8月25日发布，搭载华为乾崑智驾、鸿蒙座舱', power:'纯电驱动', source:'来源：鸿蒙智行官方' },
+            'wenjie-m8-ev': { name:'问界M8纯电版', basic:'鸿蒙智行问界品牌M8纯电车型', size:'中大型SUV', highlight:'问界M8首次推出纯电版本，覆盖豪华纯电SUV市场', power:'纯电驱动', source:'来源：鸿蒙智行官方、成都日报' },
+            'xiaomi-su7-ultra': { name:'小米SU7 Ultra纽北限量版', basic:'小米汽车SU7 Ultra纽北赛道限量版车型', size:'高性能纯电轿车', highlight:'首次在成都车展展出，纽北赛道限量版特别涂装与配置', power:'双电机/三电机高性能纯电', source:'来源：小米汽车官方' },
+            'nio-es8-gen3': { name:'蔚来第三代ES8', basic:'蔚来首款量产车型ES8的换代之作', size:'中大型纯电SUV', highlight:'更全面的性能与配置，剑指高端纯电SUV"全能选手"席位', power:'纯电驱动', source:'来源：蔚来汽车官方' },
+            'li-i8': { name:'理想i8', basic:'理想汽车首款六座纯电SUV', size:'六座中大型纯电SUV', highlight:'"超长续航、超低能耗、超快充电"核心优势，聚焦家庭高品质出行', power:'纯电驱动', source:'来源：理想汽车官方' },
+            'xpeng-p7-2025': { name:'全新改款小鹏P7', basic:'小鹏P7换代车型', size:'中型纯电轿跑', highlight:'星舰设计语言搭配赛博风格外观，搭载智能扭矩分配、AI温控系统、智能环境感知等前沿技术', power:'单电机/双电机纯电', source:'来源：小鹏汽车官方' },
+            'bmw-m2cs': { name:'全新BMW M2 CS', basic:'宝马M品牌高性能紧凑型车CS版本', size:'紧凑型高性能轿车', highlight:'纽北最快紧凑型车，成都车展上市', power:'3.0T直列六缸发动机', source:'来源：宝马集团官方' },
+            'chery-zongheng': { name:'捷途纵横序列', basic:'捷途全新豪华电混越野产品序列', size:'豪华电混越野SUV', highlight:'成都车展首秀，瞄准区域市场"智能皮卡生态"布局', power:'电混动力', source:'来源：奇瑞集团官方' },
+            'ford-bronco-ev': { name:'福特烈马新能源', basic:'福特全球首款智电趣野全地形SUV', size:'硬派越野SUV', highlight:'全球首秀，福特"野行"家族新能源产品', power:'新能源动力', source:'来源：福特中国官方' }
+        };
+        function showCarDetails(carId) {
+            const car = carDetails[carId]; if (!car) return;
+            document.getElementById('modal-body').innerHTML = `<h3>${car.name}</h3><div class="detail-section"><h4>基本信息</h4><p>${car.basic}</p></div><div class="detail-section"><h4>车身尺寸</h4><p>${car.size}</p></div><div class="detail-section"><h4>车型亮点</h4><p>${car.highlight}</p></div><div class="detail-section"><h4>动力系统</h4><p>${car.power}</p></div><p class="source">${car.source}</p>`;
+            document.getElementById('carModal').style.display = 'block';
+        }
+        function closeModal() { document.getElementById('carModal').style.display = 'none'; }
+        window.onclick = function(event) { const modal = document.getElementById('carModal'); if (event.target == modal) modal.style.display = 'none'; }
+    </script>
+</body>
+</html>
